@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra-Soft Milk Fleece Blanket - Selimut Super Lembut</title>
+    <style>
+        :root {
+            --primary: #FF9AA2;
+            --secondary: #FFB7B2;
+            --accent: #FFDAC1;
+            --dark: #555;
+            --light: #f9f9f9;
+            --pastel-blue: #E2F0CB;
+            --pastel-pink: #F8C8DC;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            padding: 50px 0;
+            background-color: white;
+        }
+        
+        .hero-content {
+            flex: 1;
+            padding-right: 30px;
+        }
+        
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        
+        .price {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+        }
+        
+        .current-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FF4757;
+        }
+        
+        .original-price {
+            font-size: 1.2rem;
+            text-decoration: line-through;
+            color: #999;
+            margin-left: 15px;
+        }
+        
+        .discount-badge {
+            background-color: #FF4757;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #FF4757, #FF6B81);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 71, 87, 0.6);
+        }
+        
+        .countdown {
+            margin: 30px 0;
+            padding: 15px;
+            background-color: var(--pastel-blue);
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .countdown-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .countdown-timer {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #FF4757;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+            background-color: var(--pastel-pink);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: var(--dark);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .feature-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 60px 0;
+            background-color: var(--pastel-blue);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        /* Guarantee Section */
+        .guarantee {
+            padding: 60px 0;
+            background-color: var(--pastel-pink);
+            text-align: center;
+        }
+        
+        .guarantee-badge {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .footer-link {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+            }
+            
+            .hero-content {
+                padding-right: 0;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            
+            .features-grid, .gallery-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .price {
+                justify-content: center;
+            }
+        }
+        
+        /* Popup Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            position: relative;
+            animation: modalopen 0.5s;
+        }
+        
+        @keyframes modalopen {
+            from {opacity: 0; transform: translateY(-50px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .popup-offer {
+            text-align: center;
+        }
+        
+        .popup-offer h3 {
+            color: #FF4757;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">Ultra-Soft Milk Fleece</div>
+            <div class="tagline">Selimut Mewah Kualitas Hotel Bintang 5</div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Ultra-Soft Milk Fleece Blanket</h1>
+                <p class="subtitle">Rasakan Kenyamanan Tidur Seperti di Hotel Bintang 5 dengan Selimut Super Lembut Ini!</p>
+                
+                <div class="price">
+                    <span class="current-price">Rp 199.000</span>
+                    <span class="original-price">Rp 330.000</span>
+                    <span class="discount-badge">DISKON 45%</span>
+                </div>
+                
+                <a href="https://rara.orderonline.id/ultra-soft-milk-fleece-blanket" class="cta-button">PESAN SEKARANG</a>
+                
+                <div class="countdown">
+                    <div class="countdown-title">Promo Berakhir Dalam:</div>
+                    <div class="countdown-timer" id="countdown">23:59:59</div>
+                </div>
+                
+                <p>✅ 100% Garansi Kepuasan<br>
+                ✅ Bahan Super Lembut & Hangat<br>
+                ✅ Cocok untuk Semua Musim</p>
+            </div>
+            <div class="hero-image">
+                <img src="https://cdn.orderonline.id/uploads/images_2422841750915648983.png" alt="Ultra-Soft Milk Fleece Blanket">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Kenapa Memilih Selimut Kami?</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🛏️</div>
+                    <h3 class="feature-title">Kualitas Hotel Bintang 5</h3>
+                    <p>Rasakan kenyamanan tidur mewah seperti di hotel-hotel ternama dengan selimut premium kami.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3 class="feature-title">Super Lembut</h3>
+                    <p>Terbuat dari bahan milk fleece berkualitas tinggi yang sangat lembut di kulit dan memberikan kehangatan sempurna.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🧼</div>
+                    <h3 class="feature-title">Mudah Perawatan</h3>
+                    <p>Praktis dicuci dan cepat kering, tetap lembut meski sudah berkali-kali pencucian.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌈</div>
+                    <h3 class="feature-title">Warna Elegan</h3>
+                    <p>Tersedia dalam berbagai pilihan warna pastel yang elegan dan cocok dengan berbagai dekorasi kamar.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">👪</div>
+                    <h3 class="feature-title">Cocok untuk Semua Usia</h3>
+                    <p>Dari anak-anak hingga lansia, semua bisa menikmati kenyamanan selimut premium ini.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3 class="feature-title">Pengiriman Cepat</h3>
+                    <p>Pesanan dikirim dalam 1x24 jam setelah pembayaran (hari kerja).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <h2 class="section-title">Galeri Produk</h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://image.rakuten.co.jp/cmszd/cabinet/07280961/2023815/blanket083-16.jpg" alt="Ultra-Soft Milk Fleece Blanket">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://cdn.orderonline.id/uploads/images_8104091750915648849.png" alt="Ultra-Soft Milk Fleece Blanket">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://image.rakuten.co.jp/cmszd/cabinet/07280961/2023815/blanket083-17.jpg" alt="Ultra-Soft Milk Fleece Blanket">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://image.rakuten.co.jp/cmszd/cabinet/07280961/2023815/blanket083-19.jpg" alt="Ultra-Soft Milk Fleece Blanket">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://cdn.orderonline.id/uploads/images_6840721750915648088.png" alt="Ultra-Soft Milk Fleece Blanket">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://image.rakuten.co.jp/cmszd/cabinet/07280961/2023815/blanket083-20.jpg" alt="Ultra-Soft Milk Fleece Blanket">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Apa Kata Pelanggan Kami?</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Selimutnya sangat lembut dan nyaman! Anak-anak jadi lebih mudah tidur. Kualitasnya benar-benar seperti di hotel bintang 5. Worth it banget untuk harganya!"</p>
+                    <p class="testimonial-author">- Ibu Sarah, 32 tahun, Jakarta</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Saya sudah beli 3 untuk hadiah natal. Keluarga dan teman-teman sangat suka. Bahannya tebal tapi tidak panas, cocok untuk iklim tropis seperti Indonesia."</p>
+                    <p class="testimonial-author">- Bpk. Andi, 45 tahun, Bandung</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Pengiriman cepat dan packing rapi. Selimutnya persis seperti di gambar, lembut sekali. Sudah 3 bulan dipakai masih seperti baru meski sering dicuci."</p>
+                    <p class="testimonial-author">- Mba. Rina, 28 tahun, Surabaya</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Saya yang punya masalah kulit sensitif sangat cocok dengan selimut ini. Tidak menyebabkan gatal-gatal seperti selimut biasa. Highly recommended!"</p>
+                    <p class="testimonial-author">- Ibu Dian, 50 tahun, Yogyakarta</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">Apa bahan selimut ini?</h3>
+                <p>Selimut kami terbuat dari bahan milk fleece premium berkualitas tinggi yang sangat lembut, hangat, dan nyaman digunakan.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">Apa ukuran yang tersedia?</h3>
+                <p>Tersedia dalam ukuran 180x200 cm yang cocok untuk tempat tidur single maupun double.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">Bagaimana cara perawatannya?</h3>
+                <p>Bisa dicuci mesin dengan air dingin, gunakan deterjen lembut. Disarankan tidak menggunakan pemutih dan dikeringkan dengan diangin-anginkan.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">Berapa lama pengirimannya?</h3>
+                <p>Pesanan akan diproses dalam 1x24 jam setelah pembayaran (hari kerja). Waktu pengiriman tergantung lokasi, biasanya 2-5 hari kerja.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">Apakah ada garansi?</h3>
+                <p>Kami memberikan garansi 100% kepuasan. Jika produk tidak sesuai ekspektasi, Anda bisa mengembalikan dalam kondisi belum digunakan.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Guarantee Section -->
+    <section class="guarantee">
+        <div class="container">
+            <div class="guarantee-badge">✅</div>
+            <h2>100% Garansi Kepuasan</h2>
+            <p>Kami yakin Anda akan menyukai selimut premium ini. Jika tidak puas, kami siap mengembalikan uang Anda!</p>
+        </div>
+    </section>
+    
+    <!-- Final CTA Section -->
+    <section class="hero" style="background-color: var(--pastel-blue); padding: 40px 0;">
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: 20px;">Jangan Lewatkan Promo Spesial Ini!</h2>
+            <p style="margin-bottom: 20px; font-size: 1.2rem;">Diskon 45% hanya berlaku untuk 100 pembeli pertama hari ini!</p>
+            
+            <div class="price" style="justify-content: center;">
+                <span class="current-price">Rp 199.000</span>
+                <span class="original-price">Rp 330.000</span>
+                <span class="discount-badge">DISKON 45%</span>
+            </div>
+            
+            <a href="https://rara.orderonline.id/ultra-soft-milk-fleece-blanket" class="cta-button" style="margin: 30px auto;">PESAN SEKARANG</a>
+            
+            <div class="countdown" style="max-width: 500px; margin: 0 auto;">
+                <div class="countdown-title">Promo Berakhir Dalam:</div>
+                <div class="countdown-timer" id="countdown2">23:59:59</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#" class="footer-link">Kebijakan Privasi</a>
+                <a href="#" class="footer-link">Syarat & Ketentuan</a>
+                <a href="#" class="footer-link">Kontak Kami</a>
+            </div>
+            <p>© 2023 Ultra-Soft Milk Fleece Blanket. Seluruh hak cipta dilindungi.</p>
+        </div>
+    </footer>
+    
+    <!-- Popup Modal -->
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="popup-offer">
+                <h3>🛍️ PROMO SPESIAL HARI INI!</h3>
+                <p>Dapatkan diskon tambahan 10% untuk pembelian pertama Anda!</p>
+                <p>Gunakan kode: <strong>WELCOME10</strong> saat checkout</p>
+                <a href="https://rara.orderonline.id/ultra-soft-milk-fleece-blanket" class="cta-button">KLIK DISINI UNTUK CLAIM PROMO</a>
+                <p style="margin-top: 15px; font-size: 0.9rem;">*Promo berlaku hingga 23:59 WIB hari ini</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const endOfDay = new Date();
+            endOfDay.setHours(23, 59, 59, 999);
+            
+            const diff = endOfDay - now;
+            
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+            document.getElementById('countdown2').textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Popup Modal
+        const modal = document.getElementById('popupModal');
+        const span = document.getElementsByClassName('close')[0];
+        
+        // Show popup after 5 seconds
+        setTimeout(function() {
+            modal.style.display = 'block';
+        }, 5000);
+        
+        span.onclick = function() {
+            modal.style.display = 'none';
+        }
+        
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
+<!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="rara" data-product-slug="ultra-soft-milk-fleece-blanket" data-product-id="685cd505dfb81af2f7065b0d" id="oo-embed-form-ultra-soft-milk-fleece-blanket-9320" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://rara.orderonline.id'); ooe('init', '5f12ee789d8e8e5e870172ee', '685cd505dfb81af2f7065b0d', '685cd505dfb81af2f7065b0e', 'oo-embed-form-ultra-soft-milk-fleece-blanket-9320', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code -->
